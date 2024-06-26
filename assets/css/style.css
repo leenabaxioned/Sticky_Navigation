@@ -99,12 +99,39 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 80%; 
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
+.header-nav {
+  padding: 10px 0;
+}
+
+.header-nav,
+.header-nav .nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav .nav-menu {
+  flex-basis: 50%;
+}
+
+.header-nav .nav-menu li a {
+  color: #000;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.header-nav .nav-menu li a:hover {
+  color: #a0c63f;
+  transition: 1s ease;
+}
+
+/* banner styling */
 
 /*=================================
   Header styling ends here
