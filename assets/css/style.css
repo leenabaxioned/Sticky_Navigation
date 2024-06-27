@@ -115,11 +115,15 @@ header {
   z-index: 1000;
  }
 
+ .hamburger { display: none; }
+
  header.scrolled {
   padding: 10px;
   background-color: #fff;
   color: #333333;
 }
+
+.nav-menu.scrolled li a { color: #1b1b1b;} 
  
 .logo-heading a {
   color: #fff;
@@ -138,7 +142,7 @@ header {
 
 .header-nav .nav-menu li a {
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .header-nav .nav-menu li .active { color: #ae3528; }
@@ -260,4 +264,47 @@ footer { background-color: #202020; }
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
-}  
+  header .wrapper { position: relative; }
+
+  .hamburger {
+    position: absolute;
+    z-index: 100;
+    top: 0%;
+    right: 0;
+    padding: 2px;
+    background: #fff;
+    border-color: transparent;
+    cursor: pointer;
+    display: block;
+  } 
+
+  .material-icons { color: #1b1b1b; }
+  .closeIcon { display: none; }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    padding-top: 16px;
+    background: #1b1b1b;;
+    color: #fff;
+    list-style: none;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+  }
+
+  .showMenu { transform: translateY(0); }
+  
+  header nav ul { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  header nav ul a { color: #fff; }
+}
