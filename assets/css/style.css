@@ -83,7 +83,7 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a { 
@@ -99,14 +99,28 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 80%; 
+  width: 78%; 
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
-.header-nav {
+header { 
+  position: sticky; 
+  top: 0;
+  z-index: 100;
+  padding: 20px 0;
+  background-color: #222222;
+ }
+
+ .header.sticky {
   padding: 10px 0;
+ }
+ 
+.logo-heading a {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .header-nav,
@@ -116,23 +130,61 @@ li {
   align-items: center;
 }
 
-.header-nav .nav-menu {
-  flex-basis: 50%;
-}
+.header-nav .nav-menu { flex-basis: 25%; }
 
 .header-nav .nav-menu li a {
-  color: #000;
+  color: #fff;
   font-size: 13px;
-  text-transform: uppercase;
 }
 
+.header-nav .nav-menu li .active { color: #ae3528; }
+
 .header-nav .nav-menu li a:hover {
-  color: #a0c63f;
+  color: #ae3528;
   transition: 1s ease;
 }
 
-/* banner styling */
+/* banner styling starts here*/
+.banner-content .wrapper { width: 100%; }
+.banner { position: relative; }
 
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  color: #fff;
+  text-align: center;
+}
+
+.banner-content h1 { 
+  padding-bottom: 25px;
+  font-size: 46px;
+}
+
+.banner-content p { 
+  font-size: 20px; 
+  letter-spacing: 1px;
+}
+/* banner styling ends here*/
+
+/* Site content styling starts here */
+.site-content { padding: 20px 0 40px 0; }
+
+.content-one h3 {
+  padding-bottom: 20px;
+  color: #1b1b1b; 
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.content-one p {
+  padding-bottom: 20px;
+  color: #555;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+}
+/* Site content styling ends here */
 /*=================================
   Header styling ends here
 =================================*/  
@@ -140,6 +192,32 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+main { position: relative; }
+
+.scroll {
+  position: absolute;
+  bottom: 1%;
+  right: 2%;
+}
+
+.scrollup {
+  display: flex;
+  text-indent: -9999px;
+}
+
+.scrollup::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "FontAwesome";
+  content: "\f062";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #202020;
+  text-indent: 0px;
+}
 
 /*=================================
   main styling ends here
@@ -148,7 +226,29 @@ li {
 /*=================================
   footer styling starts here
 =================================*/ 
+footer { background-color: #202020; }
 
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 13px;
+}
+
+.footer-nav .nav-menu {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav .nav-menu li a {
+  color: #fff;
+  transition: 0.5s ease;
+}
+
+.footer-nav .nav-menu li a:hover { color: #ae3528; }
  /*=================================
   footer styling ends here
 =================================*/ 
