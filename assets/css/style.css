@@ -111,11 +111,15 @@ header {
   z-index: 100;
   padding: 20px 0;
   background-color: #222222;
+  transition: padding 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
  }
 
- .header.sticky {
-  padding: 10px 0;
- }
+ header.scrolled {
+  padding: 10px;
+  background-color: #fff;
+  color: #333333;
+}
  
 .logo-heading a {
   color: #fff;
