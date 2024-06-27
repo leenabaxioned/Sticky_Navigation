@@ -13,8 +13,10 @@ window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
       document.querySelector("header").classList.add("scrolled");
+      document.querySelector(".header-nav").classList.add("scrolled");
     } else {
       document.querySelector("header").classList.remove("scrolled");
+      document.querySelector(".header-nav").classList.remove("scrolled");
     }
   }
 // Sticky navigation ends here---------------------------------
