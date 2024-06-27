@@ -178,14 +178,16 @@ header {
 /* Site content styling starts here */
 .site-content { padding: 20px 0 40px 0; }
 
-.content-one h3 {
+.content-one h3,
+.content-two h3 {
   padding-bottom: 20px;
   color: #1b1b1b; 
   font-size: 24px;
   font-weight: 600;
 }
 
-.content-one p {
+.content-one p,
+.content-two p {
   padding-bottom: 20px;
   color: #555;
   font-size: 15px;
