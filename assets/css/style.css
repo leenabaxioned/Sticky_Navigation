@@ -248,18 +248,18 @@ footer { background-color: #202020; }
   font-size: 13px;
 }
 
-.footer-nav .nav-menu {
+.footer-nav .footernav-menu {
   flex-basis: 25%;
   display: flex;
   justify-content: space-between;
 }
 
-.footer-nav .nav-menu li a {
+.footer-nav .footernav-menu li a {
   color: #fff;
   transition: 0.5s ease;
 }
 
-.footer-nav .nav-menu li a:hover { color: #ae3528; }
+.footer-nav .footernav-menu li a:hover { color: #ae3528; }
  /*=================================
   footer styling ends here
 =================================*/ 
@@ -313,6 +313,21 @@ footer { background-color: #202020; }
   .header-nav.scrolled .nav-menu li a { color: #fff; }
   .header-nav .nav-menu .active { color: #fff; }
   .banner-content { left: 14%; }
+  .footer-nav .footernav-menu li a:hover { color: #fff; }
+  .footer-nav { 
+    flex-wrap: wrap; 
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-nav .footernav-menu {
+    padding-bottom: 10px;
+    flex-basis: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) { 
+  .footer-nav .footernav-menu { flex-basis: 60%; }
 }
 
 @media only screen and (max-width: 640px) { 
@@ -325,6 +340,8 @@ footer { background-color: #202020; }
   .banner-content { left: 8%; }
   .banner-content h1 { font-size: 30px; }
   .banner-content p { font-size: 12px; }
+  .footer-nav .footernav-menu { flex-basis: 80%; }
+  .footernav-menu h2 { flex-basis: 100%; }
 }
 
 @media only screen and (max-width: 320px) { 
@@ -335,4 +352,5 @@ footer { background-color: #202020; }
   }
 
   .banner-content p { font-size: 10px; }
+  .footer-nav .footernav-menu { flex-basis: 100%; }
 }
