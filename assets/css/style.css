@@ -322,8 +322,10 @@ footer { background-color: #202020; }
 
   .footer-nav .footernav-menu {
     padding-bottom: 10px;
-    flex-basis: 50%;
+    flex-basis: 46%;
   }
+
+  .footer-nav h2 { flex-basis: 55%; }
 }
 
 @media only screen and (max-width: 768px) { 
@@ -334,6 +336,7 @@ footer { background-color: #202020; }
   .banner-content { left: 10%; }
   .banner-content h1 { font-size: 35px; }
   .banner-content p { font-size: 15px; }
+  .footer-nav .footernav-menu { flex-basis: 70%; }
 }
 
 @media only screen and (max-width: 480px) { 
